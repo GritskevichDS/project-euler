@@ -12,9 +12,7 @@ import java.io.InputStreamReader;
 public class N6_SumSquareDifference {
 
   public static void main(String[] args) {
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-    try {
+    try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
       int count = Integer.parseInt(reader.readLine());
 
       while (count-- > 0) {
