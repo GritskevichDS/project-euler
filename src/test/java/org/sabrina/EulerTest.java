@@ -14,7 +14,7 @@ import static org.junit.Assert.assertArrayEquals;
 
 public abstract class EulerTest {
 
-  protected String lineSeparator = AccessController.doPrivileged(new GetPropertyAction("line.separator"));
+  private String lineSeparator = AccessController.doPrivileged(new GetPropertyAction("line.separator"));
 
   protected void execute(String[] inputData, String[] outputData, Consumer<String[]> main) throws IOException {
     InputStream sysIn = System.in;
@@ -41,7 +41,7 @@ public abstract class EulerTest {
     }
   }
 
-  protected byte[] toByteArray(String[] data) {
+  private byte[] toByteArray(String[] data) {
     return Joiner.on(lineSeparator).join(data).getBytes(StandardCharsets.UTF_8);
   }
 }

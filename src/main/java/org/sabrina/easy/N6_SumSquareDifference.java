@@ -1,7 +1,6 @@
 package org.sabrina.easy;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import org.sabrina.EulerTask;
 
 /**
  * Project Euler #6: Sum square difference
@@ -9,22 +8,19 @@ import java.io.InputStreamReader;
  * @author Dmitry Gritskevich
  * @see <a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler006">Description</a>
  */
-public class N6_SumSquareDifference {
+public class N6_SumSquareDifference extends EulerTask {
 
   public static void main(String[] args) {
-    try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-      int count = Integer.parseInt(reader.readLine());
-
-      while (count-- > 0) {
-        int number = Integer.parseInt(reader.readLine());
-        System.out.println(Math.abs(sumOfSquares(number) - squareOfSum(number)));
-      }
-    } catch (Exception e) {
-      System.err.println("Something went wrong: " + e);
-    }
+    new N6_SumSquareDifference().execute();
   }
 
-  private static long sumOfSquares(int number) {
+  @Override
+  protected String getOutput(int number) {
+    long result = Math.abs(sumOfSquares(number) - squareOfSum(number));
+    return Long.toString(result);
+  }
+
+  private long sumOfSquares(int number) {
     long result = 0;
 
     for (int i = number; i > 0; i--)
@@ -32,7 +28,7 @@ public class N6_SumSquareDifference {
     return result;
   }
 
-  private static long squareOfSum(int number) {
+  private long squareOfSum(int number) {
     return (long) Math.pow(number * (number + 1) / 2, 2);
   }
 }

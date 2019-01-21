@@ -1,7 +1,6 @@
 package org.sabrina.easy;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import org.sabrina.EulerTask;
 
 /**
  * Project Euler #1: Multiples of 3 and 5
@@ -9,22 +8,18 @@ import java.io.InputStreamReader;
  * @author Dmitry Gritskevich
  * @see <a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler001">Description</a>
  */
-public class N1_MultiplesOf3And5 {
+public class N1_MultiplesOf3And5 extends EulerTask {
 
   public static void main(String[] args) {
-    try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-      int count = Integer.parseInt(reader.readLine());
-
-      while (count-- > 0) {
-        int number = Integer.parseInt(reader.readLine());
-        System.out.println(sumOfMultiples(number));
-      }
-    } catch (Exception e) {
-      System.err.println("Something went wrong: " + e);
-    }
+    new N1_MultiplesOf3And5().execute();
   }
 
-  private static long sumOfMultiples(long number) {
+  @Override
+  protected String getOutput(int number) {
+    return Long.toString(sumOfMultiples(number));
+  }
+
+  private long sumOfMultiples(long number) {
     long sum = 0;
 
     long count = (number - 1) / 3;
@@ -39,7 +34,7 @@ public class N1_MultiplesOf3And5 {
     return sum;
   }
 
-  private static long subSum(long n) {
+  private long subSum(long n) {
     return n * (n + 1) / 2;
   }
 }
