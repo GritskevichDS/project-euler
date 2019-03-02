@@ -4,11 +4,11 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * Abstract class of tasks
+ * Abstract class of tasks executed step by step
  *
  * @author Dmitry Gritskevich
  */
-public abstract class EulerTask {
+public abstract class StepwiseEulerTask {
 
   protected abstract String getOutput(int number);
 

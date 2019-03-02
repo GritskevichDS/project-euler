@@ -1,6 +1,6 @@
 package org.sabrina.easy;
 
-import org.sabrina.EulerTask;
+import org.sabrina.StepwiseEulerTask;
 
 /**
  * Project Euler #6: Sum square difference
@@ -8,7 +8,7 @@ import org.sabrina.EulerTask;
  * @author Dmitry Gritskevich
  * @see <a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler006">Description</a>
  */
-public class N6_SumSquareDifference extends EulerTask {
+public class N6_SumSquareDifference extends StepwiseEulerTask {
 
   public static void main(String[] args) {
     new N6_SumSquareDifference().execute();

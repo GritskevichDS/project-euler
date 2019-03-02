@@ -1,6 +1,6 @@
 package org.sabrina.easy;
 
-import org.sabrina.EulerTask;
+import org.sabrina.StepwiseEulerTask;
 
 /**
  * Project Euler #9: Special Pythagorean triplet
@@ -22,7 +22,7 @@ import org.sabrina.EulerTask;
  * @author Dmitry Gritskevich
  * @see <a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler009">Description</a>
  */
-public class N9_SpecialPythagoreanTriplet extends EulerTask {
+public class N9_SpecialPythagoreanTriplet extends StepwiseEulerTask {
 
   public static void main(String[] args) {
     new N9_SpecialPythagoreanTriplet().execute();

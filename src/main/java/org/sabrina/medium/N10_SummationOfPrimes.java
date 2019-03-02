@@ -1,6 +1,6 @@
 package org.sabrina.medium;
 
-import org.sabrina.EulerTask;
+import org.sabrina.StepwiseEulerTask;
 
 /**
  * Project Euler #10: Summation of primes
@@ -8,7 +8,7 @@ import org.sabrina.EulerTask;
  * @author Dmitry Gritskevich
  * @see <a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler010">Description</a>
  */
-public class N10_SummationOfPrimes extends EulerTask {
+public class N10_SummationOfPrimes extends StepwiseEulerTask {
 
   private static int maxNumber = 1_000_000;
   private static long[] results = new long[maxNumber + 1];

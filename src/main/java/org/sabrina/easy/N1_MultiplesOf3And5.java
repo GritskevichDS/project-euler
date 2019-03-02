@@ -1,6 +1,6 @@
 package org.sabrina.easy;
 
-import org.sabrina.EulerTask;
+import org.sabrina.StepwiseEulerTask;
 
 /**
  * Project Euler #1: Multiples of 3 and 5
@@ -8,7 +8,7 @@ import org.sabrina.EulerTask;
  * @author Dmitry Gritskevich
  * @see <a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler001">Description</a>
  */
-public class N1_MultiplesOf3And5 extends EulerTask {
+public class N1_MultiplesOf3And5 extends StepwiseEulerTask {
 
   public static void main(String[] args) {
     new N1_MultiplesOf3And5().execute();
