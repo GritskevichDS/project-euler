@@ -10,20 +10,26 @@ import java.io.InputStreamReader;
  */
 public abstract class EntireEulerTask {
 
-  protected abstract void pushNumber(int number);
+  protected int[] numbers;
+
   protected abstract void printResults();
 
   protected void execute() {
     try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
       int count = Integer.parseInt(reader.readLine());
+      this.numbers = new int[count];
 
-      while (count-- > 0) {
+      for (int i = 0; i < count; i++) {
         int number = Integer.parseInt(reader.readLine());
-        pushNumber(number);
+        pushNumber(i, number);
       }
       printResults();
     } catch (Exception e) {
       System.err.println("Something went wrong: " + e);
     }
+  }
+
+  protected void pushNumber(int index, int number) {
+    this.numbers[index] = number;
   }
 }
